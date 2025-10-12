@@ -92,6 +92,7 @@ int main(void)
   HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
+  BSP_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */

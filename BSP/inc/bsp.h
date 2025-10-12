@@ -4,13 +4,17 @@
 
 #ifndef C8T6_BSP_H
 #define C8T6_BSP_H
+
 #pragma once
 #include "main.h"
+#include "tim.h"
 
+#ifdef __cplusplus
 enum class MotorType {
     DC,
     Servo
 };
+
 class Motor {
 public:
     Motor(TIM_HandleTypeDef* tim,  uint32_t channel,MotorType type);
@@ -22,6 +26,8 @@ private:
     uint32_t m_channel;
     MotorType m_type;
 };
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
